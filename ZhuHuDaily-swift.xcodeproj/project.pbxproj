@@ -17,6 +17,8 @@
 		9F5004871E9CF99800F73873 /* StoryRotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5004861E9CF99800F73873 /* StoryRotateView.swift */; };
 		9F5ABFE21E95E4000063C8F8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5ABFE11E95E4000063C8F8 /* libsqlite3.tbd */; };
 		9F5ABFE41E95E4640063C8F8 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */; };
+		9F8E17C71EF55B8C00BCADD4 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E17C61EF55B8C00BCADD4 /* ShareView.swift */; };
+		9F9542851EF533E100D4F5F7 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9542841EF533E100D4F5F7 /* ActionView.swift */; };
 		9F9EDE201EEBCACD0043C6E7 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EDE1F1EEBCACD0043C6E7 /* Launch.storyboard */; };
 		9FB12C0D1E95CC2B004812BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */; };
 		9FB12C121E95CC2B004812BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB12C101E95CC2B004812BB /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		9F5004861E9CF99800F73873 /* StoryRotateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRotateView.swift; sourceTree = "<group>"; };
 		9F5ABFE11E95E4000063C8F8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		9F8E17C61EF55B8C00BCADD4 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		9F9542841EF533E100D4F5F7 /* ActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		9F9EDE1F1EEBCACD0043C6E7 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9FB12C091E95CC2B004812BB /* ZhuHuDaily-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZhuHuDaily-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F9542831EF533C800D4F5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F9542841EF533E100D4F5F7 /* ActionView.swift */,
+				9F8E17C61EF55B8C00BCADD4 /* ShareView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9FB12C001E95CC2B004812BB = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		9FB841CC1EF5145700B49CA7 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				9F9542831EF533C800D4F5F7 /* View */,
 				9FB841CD1EF5148400B49CA7 /* Controller */,
 				9FE645C51E95CDDE005672D2 /* Model */,
 			);
@@ -373,8 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9542851EF533E100D4F5F7 /* ActionView.swift in Sources */,
 				9F5004871E9CF99800F73873 /* StoryRotateView.swift in Sources */,
 				9FE3F20D1E9F057700CC68FE /* DateTool.swift in Sources */,
+				9F8E17C71EF55B8C00BCADD4 /* ShareView.swift in Sources */,
 				9F2A30D91E9613F3006A8880 /* NetworkTool.swift in Sources */,
 				9F0A48411EA09C05003ADE72 /* UI-MainViewController.swift in Sources */,
 				9F5ABFE41E95E4640063C8F8 /* PrefixHeader.swift in Sources */,

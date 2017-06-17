@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class DetailViewController: UIViewController, UIScrollViewDelegate {
+class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDelegate{
     
     var detailStoryModel: StoryDetailModel = StoryDetailModel() {
         didSet {
@@ -21,6 +21,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     var webView = UIWebView()
     var coverView = UIImageView()
+    var shareView = ShareView()
+    var actionView = ActionView.init(frame: CGRect.init(x: 0, y: 0.92 * APP_HEIGHT, width: APP_WIDTH, height: 0.08 * APP_HEIGHT))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +53,49 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         coverView.clipsToBounds = true
         self.webView.scrollView.addSubview(coverView)
         
-        //webView.scrollView.contentInset = UIEdgeInsets.init(top: APP_HEIGHT * 0.27, left: 0, bottom: 0, right: 0)
+        //ActionView
+        //actionView.frame = CGRect.init(x: 0, y: 0.92 * APP_HEIGHT, width: APP_WIDTH, height: 0.08 * APP_HEIGHT)
+        actionView.delegate = self
+        self.view.addSubview(actionView)
+        
     }
     
+    
+    // MARK - ActionViewDelegate
+    func commentButtonClick() -> Void {
+        let bgView = UIView.init(frame: self.view.bounds)
+        
+        bgView.tag = 1
+        
+        bgView.backgroundColor = UIColor.init(white: 0, alpha: 0.2)
+        //bgView.alpha = 0.2
+        self.view.addSubview(bgView)
+        
+        shareView.frame = CGRect.init(x: 0.2 * APP_WIDTH, y: -0.1 * APP_HEIGHT, width: 0.6 * APP_WIDTH, height: 0.4 * APP_HEIGHT)
+        shareView.tag = 2
+        bgView.addSubview(shareView)
+        
+        UIView.animate(withDuration: 1.0) {
+            self.shareView.center.y = 0.4 * APP_HEIGHT
+        }
+        
+        let tapGesturRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backToAirtity))
+        bgView.addGestureRecognizer(tapGesturRecognizer)
+    }
+    
+    func backToAirtity() -> Void {
+        UIView.animate(withDuration: 1.0) { 
+            self.shareView.center.y = 1.1 * APP_HEIGHT
+        }
+        for view in self.view.subviews {
+            if view.tag == 1 {
+                view.removeFromSuperview()
+            }
+        }
+    }
+    func shareButtonClick() -> Void {
+        print("分享按钮")
+    }
     // MARK - LoadStory
     private func loadStoryDetail(_ id: String) -> Void {
         SVProgressHUD.show(withStatus: "加载中~")
