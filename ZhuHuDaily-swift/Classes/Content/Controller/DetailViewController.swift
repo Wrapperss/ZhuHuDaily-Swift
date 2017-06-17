@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     var detailStoryModel: StoryDetailModel = StoryDetailModel() {
         didSet {
@@ -21,7 +21,6 @@ class DetailViewController: UIViewController {
     
     var webView = UIWebView()
     var coverView = UIImageView()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +43,15 @@ class DetailViewController: UIViewController {
         webView.frame = CGRect.init(x: 0, y: -20, width: APP_WIDTH, height: APP_HEIGHT + 20)
         self.view.addSubview(webView)
         
+        webView.scrollView.delegate = self
+        
         //imageView
-        coverView.frame = CGRect.init(x: 0, y: 0, width: APP_WIDTH, height: APP_HEIGHT * 0.3)
+        coverView.frame = CGRect.init(x: 0, y: 0, width: APP_WIDTH, height: APP_HEIGHT * 0.27)
+        coverView.contentMode = .scaleAspectFill
+        coverView.clipsToBounds = true
         self.webView.scrollView.addSubview(coverView)
+        
+        //webView.scrollView.contentInset = UIEdgeInsets.init(top: APP_HEIGHT * 0.27, left: 0, bottom: 0, right: 0)
     }
     
     // MARK - LoadStory
@@ -63,6 +68,18 @@ class DetailViewController: UIViewController {
                 SVProgressHUD.showError(withStatus: "加载失败!")
             }
 
+        }
+    }
+    
+    
+    //头部放大
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yOffset = scrollView.contentOffset.y
+        if yOffset < 0 {
+            var frame = coverView.frame
+            frame.origin.y = yOffset
+            frame.size.height = -yOffset + 0.27 * APP_HEIGHT
+            self.coverView.frame = frame
         }
     }
 }

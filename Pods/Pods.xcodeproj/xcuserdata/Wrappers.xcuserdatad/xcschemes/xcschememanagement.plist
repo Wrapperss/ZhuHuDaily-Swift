@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XHLaunchAd.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1456B7ED257D7C706E577F0139058006</key>
+		<key>1041029B6390F65593F617C119B04256</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C2645989BEA05C64D897BBE978FF9C7</key>
+		<key>3ECB6F7AABDC3B833003A6D4BC2367BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C9EE4EA2605C8E951AD27719D58A2E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>663A876E578FC8745586ABD5AE142779</key>
+		<key>781864599823DD0C1A5CFDE086BB449B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A4FE2DE06D025D152F01CE331D1EF1D</key>
+		<key>824BFD6CF9E8F16D39FED2F6902599A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

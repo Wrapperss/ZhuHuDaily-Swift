@@ -25,7 +25,6 @@ class TitleView: UIView {
         self.addSubview(titleLabel)
         titleLabel.mas_makeConstraints { (make) in
             make?.centerX.equalTo()(self.mas_centerX)
-            //make?.centerY.equalTo()(self.mas_centerY)?.insets()(UIEdgeInsets.init(top: -20, left: 0, bottom: 0, right: 0))
             make?.bottom.equalTo()(self)?.insets()(UIEdgeInsets.init(top: 0, left: 0, bottom: 11, right: 0))
         }
     }

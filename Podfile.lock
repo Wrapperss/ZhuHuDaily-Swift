@@ -7,6 +7,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.1.2)
+  - XHLaunchAd (3.5.4)
   - YYCache (1.0.4)
 
 DEPENDENCIES:
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage (~> 3.8)
   - SVProgressHUD
+  - XHLaunchAd
   - YYCache
 
 SPEC CHECKSUMS:
@@ -25,8 +27,9 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  XHLaunchAd: 7a55def52be6cadd6317b84fd74496b7fee4fd21
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: cfd46594399e52894f068b0f419ede276ff8f009
+PODFILE CHECKSUM: dc79a931d355ccfbb8094392e0a22bcf1053928f
 
-COCOAPODS: 1.2.1.rc.1
+COCOAPODS: 1.2.1

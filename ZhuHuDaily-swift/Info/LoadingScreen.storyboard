@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gs6-n7-gkm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="iIJ-79-ERz">
+            <objects>
+                <viewController id="Gs6-n7-gkm" customClass="LoadingViewController" customModule="ZhuHuDaily_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uvC-GD-Ohm"/>
+                        <viewControllerLayoutGuide type="bottom" id="hTj-id-0Tt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8rr-5j-ugk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2t-cs-kOU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gvK-1V-s0q">
+                                <rect key="frame" x="125" y="576" width="125" height="45"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gvK-1V-s0q" firstAttribute="centerX" secondItem="8rr-5j-ugk" secondAttribute="centerX" id="9CK-Hk-on6"/>
+                            <constraint firstItem="hTj-id-0Tt" firstAttribute="top" secondItem="gvK-1V-s0q" secondAttribute="bottom" constant="46" id="Qqx-nt-F0o"/>
+                            <constraint firstItem="v2t-cs-kOU" firstAttribute="leading" secondItem="8rr-5j-ugk" secondAttribute="leading" id="h3w-nz-8Ow"/>
+                            <constraint firstAttribute="trailing" secondItem="v2t-cs-kOU" secondAttribute="trailing" id="mGK-aj-RbA"/>
+                            <constraint firstItem="hTj-id-0Tt" firstAttribute="top" secondItem="v2t-cs-kOU" secondAttribute="bottom" id="pwB-l8-kaF"/>
+                            <constraint firstItem="v2t-cs-kOU" firstAttribute="top" secondItem="8rr-5j-ugk" secondAttribute="top" id="wFF-gL-ape"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="v2t-cs-kOU" id="awB-GZ-sE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaC-d6-jw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="-395.35232383808096"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch_screen_logo" width="125" height="45"/>
+    </resources>
+</document>

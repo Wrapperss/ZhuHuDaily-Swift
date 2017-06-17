@@ -16,13 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow.init(frame: APP_SCREEN)
-        let mainVC = MainViewController()
-        mainVC.title = "知乎日报"
-        
-        let navVC = UINavigationController.init(rootViewController: mainVC)
-        self.window?.rootViewController = navVC
-        self.window?.makeKeyAndVisible()
+//        self.window = UIWindow.init(frame: APP_SCREEN)
+//        let mainVC = MainViewController()
+//        let navVC = UINavigationController.init(rootViewController: mainVC)
+//        self.window?.rootViewController = navVC
+//        self.window?.makeKeyAndVisible()
         
         return true
     }

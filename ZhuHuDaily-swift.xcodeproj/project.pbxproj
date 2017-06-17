@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C3FAF66950B64102B61D551 /* Pods_ZhuHuDaily_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0848B6FAA15C25A5C7DA6881 /* Pods_ZhuHuDaily_swift.framework */; };
 		9F0A48411EA09C05003ADE72 /* UI-MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */; };
-		9F0A48451EA0AA8C003ADE72 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A48441EA0AA8C003ADE72 /* TitleView.swift */; };
 		9F2A30D91E9613F3006A8880 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A30D81E9613F3006A8880 /* NetworkTool.swift */; };
 		9F46BF491EA7088C00D0B036 /* FakeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46BF481EA7088C00D0B036 /* FakeNavView.swift */; };
 		9F46BF4B1EA7116800D0B036 /* ScrollView+MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */; };
@@ -18,10 +17,13 @@
 		9F5004871E9CF99800F73873 /* StoryRotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5004861E9CF99800F73873 /* StoryRotateView.swift */; };
 		9F5ABFE21E95E4000063C8F8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5ABFE11E95E4000063C8F8 /* libsqlite3.tbd */; };
 		9F5ABFE41E95E4640063C8F8 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */; };
+		9F9EDE201EEBCACD0043C6E7 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EDE1F1EEBCACD0043C6E7 /* Launch.storyboard */; };
 		9FB12C0D1E95CC2B004812BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */; };
 		9FB12C121E95CC2B004812BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB12C101E95CC2B004812BB /* Main.storyboard */; };
 		9FB12C141E95CC2B004812BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB12C131E95CC2B004812BB /* Assets.xcassets */; };
-		9FB12C171E95CC2B004812BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB12C151E95CC2B004812BB /* LaunchScreen.storyboard */; };
+		9FB841D31EF5176200B49CA7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB841D21EF5176200B49CA7 /* TitleView.swift */; };
+		9FBE5FDA1EEBE7AA00523257 /* LoadingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FBE5FD91EEBE7AA00523257 /* LoadingScreen.storyboard */; };
+		9FBE5FDC1EEBE87200523257 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE5FDB1EEBE87200523257 /* LoadingViewController.swift */; };
 		9FD219F51E9F4D4800E6A119 /* LoadStory-MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD219F41E9F4D4800E6A119 /* LoadStory-MainViewController.swift */; };
 		9FD9C7191E976C150040821A /* StoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9C7171E976C150040821A /* StoryViewCell.swift */; };
 		9FD9C71A1E976C150040821A /* StoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9C7181E976C150040821A /* StoryViewCell.xib */; };
@@ -37,7 +39,6 @@
 		0848B6FAA15C25A5C7DA6881 /* Pods_ZhuHuDaily_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhuHuDaily_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8716639D102AC26C687FAE90 /* Pods-ZhuHuDaily-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhuHuDaily-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhuHuDaily-swift/Pods-ZhuHuDaily-swift.release.xcconfig"; sourceTree = "<group>"; };
 		9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI-MainViewController.swift"; sourceTree = "<group>"; };
-		9F0A48441EA0AA8C003ADE72 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		9F2A30D81E9613F3006A8880 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		9F46BF481EA7088C00D0B036 /* FakeNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNavView.swift; sourceTree = "<group>"; };
 		9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+MainViewController.swift"; sourceTree = "<group>"; };
@@ -46,12 +47,15 @@
 		9F5004861E9CF99800F73873 /* StoryRotateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryRotateView.swift; sourceTree = "<group>"; };
 		9F5ABFE11E95E4000063C8F8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		9F9EDE1F1EEBCACD0043C6E7 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		9FB12C091E95CC2B004812BB /* ZhuHuDaily-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZhuHuDaily-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB12C111E95CC2B004812BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FB12C131E95CC2B004812BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9FB12C161E95CC2B004812BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FB12C181E95CC2B004812BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FB841D21EF5176200B49CA7 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		9FBE5FD91EEBE7AA00523257 /* LoadingScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadingScreen.storyboard; sourceTree = "<group>"; };
+		9FBE5FDB1EEBE87200523257 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		9FD219F41E9F4D4800E6A119 /* LoadStory-MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoadStory-MainViewController.swift"; sourceTree = "<group>"; };
 		9FD9C7171E976C150040821A /* StoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewCell.swift; sourceTree = "<group>"; };
 		9FD9C7181E976C150040821A /* StoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewCell.xib; sourceTree = "<group>"; };
@@ -87,6 +91,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9F04052B1EF5184A00A1AE41 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				9FB12C131E95CC2B004812BB /* Assets.xcassets */,
+				9FB12C181E95CC2B004812BB /* Info.plist */,
+				9F9EDE1F1EEBCACD0043C6E7 /* Launch.storyboard */,
+				9FBE5FD91EEBE7AA00523257 /* LoadingScreen.storyboard */,
+				9FB12C101E95CC2B004812BB /* Main.storyboard */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		9F5ABFE01E95E3FF0063C8F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,69 +134,115 @@
 			isa = PBXGroup;
 			children = (
 				9FE645C31E95CDBC005672D2 /* Classes */,
-				9FB12C131E95CC2B004812BB /* Assets.xcassets */,
-				9FB12C181E95CC2B004812BB /* Info.plist */,
-				9FB12C151E95CC2B004812BB /* LaunchScreen.storyboard */,
-				9FB12C101E95CC2B004812BB /* Main.storyboard */,
+				9F04052B1EF5184A00A1AE41 /* Info */,
 			);
 			path = "ZhuHuDaily-swift";
+			sourceTree = "<group>";
+		};
+		9FB841CA1EF5142B00B49CA7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9FB841CF1EF514A300B49CA7 /* Controller */,
+				9FB841D01EF514C600B49CA7 /* Model */,
+				9FB841D11EF5156300B49CA7 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9FB841CB1EF5144700B49CA7 /* Lanuch */ = {
+			isa = PBXGroup;
+			children = (
+				9FB841CE1EF5149800B49CA7 /* Controller */,
+			);
+			path = Lanuch;
+			sourceTree = "<group>";
+		};
+		9FB841CC1EF5145700B49CA7 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				9FB841CD1EF5148400B49CA7 /* Controller */,
+				9FE645C51E95CDDE005672D2 /* Model */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		9FB841CD1EF5148400B49CA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FED72581EA1EA2E004968CD /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FB841CE1EF5149800B49CA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FBE5FDB1EEBE87200523257 /* LoadingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FB841CF1EF514A300B49CA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FD219F41E9F4D4800E6A119 /* LoadStory-MainViewController.swift */,
+				9FE645C91E95CE49005672D2 /* MainViewController.swift */,
+				9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */,
+				9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FB841D01EF514C600B49CA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F4DC0B31E9B375A00200192 /* StoryModel.swift */,
+				9F5004841E9CF89100F73873 /* TopStoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FB841D11EF5156300B49CA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F46BF481EA7088C00D0B036 /* FakeNavView.swift */,
+				9F5004861E9CF99800F73873 /* StoryRotateView.swift */,
+				9FD9C7171E976C150040821A /* StoryViewCell.swift */,
+				9FD9C7181E976C150040821A /* StoryViewCell.xib */,
+				9FB841D21EF5176200B49CA7 /* TitleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9FE645C31E95CDBC005672D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9FE645C41E95CDD2005672D2 /* Controller */,
-				9FE645C51E95CDDE005672D2 /* Model */,
+				9FB841CA1EF5142B00B49CA7 /* Home */,
+				9FB841CC1EF5145700B49CA7 /* Content */,
+				9FB841CB1EF5144700B49CA7 /* Lanuch */,
 				9FE645C81E95CE0E005672D2 /* Tools */,
-				9FE645C61E95CDE5005672D2 /* View */,
 				9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		9FE645C41E95CDD2005672D2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9FE645C91E95CE49005672D2 /* MainViewController.swift */,
-				9FD219F41E9F4D4800E6A119 /* LoadStory-MainViewController.swift */,
-				9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */,
-				9FED72581EA1EA2E004968CD /* DetailViewController.swift */,
-				9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		9FE645C51E95CDDE005672D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9F4DC0B31E9B375A00200192 /* StoryModel.swift */,
-				9F5004841E9CF89100F73873 /* TopStoryModel.swift */,
 				9FED725A1EA20829004968CD /* StoryDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9FE645C61E95CDE5005672D2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9FD9C7171E976C150040821A /* StoryViewCell.swift */,
-				9FD9C7181E976C150040821A /* StoryViewCell.xib */,
-				9F5004861E9CF99800F73873 /* StoryRotateView.swift */,
-				9F0A48441EA0AA8C003ADE72 /* TitleView.swift */,
-				9F46BF481EA7088C00D0B036 /* FakeNavView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		9FE645C81E95CE0E005672D2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				9F2A30D81E9613F3006A8880 /* NetworkTool.swift */,
-				9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */,
-				9FE645CF1E95DF0D005672D2 /* ZhuHuDaily-Brdging-Header.h */,
 				9FE3F20A1E9F021600CC68FE /* CacheTool.swift */,
 				9FE3F20C1E9F057700CC68FE /* DateTool.swift */,
 				9FE3F20E1E9F0BC500CC68FE /* Extension-Date.swift */,
+				9F2A30D81E9613F3006A8880 /* NetworkTool.swift */,
+				9F5ABFE31E95E4640063C8F8 /* PrefixHeader.swift */,
+				9FE645CF1E95DF0D005672D2 /* ZhuHuDaily-Brdging-Header.h */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -248,10 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FB12C171E95CC2B004812BB /* LaunchScreen.storyboard in Resources */,
+				9F9EDE201EEBCACD0043C6E7 /* Launch.storyboard in Resources */,
 				9FB12C141E95CC2B004812BB /* Assets.xcassets in Resources */,
 				9FD9C71A1E976C150040821A /* StoryViewCell.xib in Resources */,
 				9FB12C121E95CC2B004812BB /* Main.storyboard in Resources */,
+				9FBE5FDA1EEBE7AA00523257 /* LoadingScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,17 +380,18 @@
 				9F5ABFE41E95E4640063C8F8 /* PrefixHeader.swift in Sources */,
 				9F46BF4B1EA7116800D0B036 /* ScrollView+MainViewController.swift in Sources */,
 				9FB12C0D1E95CC2B004812BB /* AppDelegate.swift in Sources */,
+				9FBE5FDC1EEBE87200523257 /* LoadingViewController.swift in Sources */,
 				9F5004851E9CF89100F73873 /* TopStoryModel.swift in Sources */,
 				9FED72591EA1EA2E004968CD /* DetailViewController.swift in Sources */,
 				9FD9C7191E976C150040821A /* StoryViewCell.swift in Sources */,
 				9FED725B1EA20829004968CD /* StoryDetailModel.swift in Sources */,
 				9FE645CA1E95CE49005672D2 /* MainViewController.swift in Sources */,
 				9FD219F51E9F4D4800E6A119 /* LoadStory-MainViewController.swift in Sources */,
+				9FB841D31EF5176200B49CA7 /* TitleView.swift in Sources */,
 				9FE3F20B1E9F021600CC68FE /* CacheTool.swift in Sources */,
 				9F46BF491EA7088C00D0B036 /* FakeNavView.swift in Sources */,
 				9F4DC0B41E9B375A00200192 /* StoryModel.swift in Sources */,
 				9FE3F20F1E9F0BC500CC68FE /* Extension-Date.swift in Sources */,
-				9F0A48451EA0AA8C003ADE72 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,15 +404,6 @@
 				9FB12C111E95CC2B004812BB /* Base */,
 			);
 			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-		9FB12C151E95CC2B004812BB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FB12C161E95CC2B004812BB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -456,12 +511,14 @@
 				DEVELOPMENT_TEAM = 9X3F3UD5EQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "ZhuHuDaily-swift/Info.plist";
+				INFOPLIST_FILE = "ZhuHuDaily-swift/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wrappers.ZhuHuDaily-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Wrappers/git/ZhuHuDaily-Swift/ZhuHuDaily-swift/Classes/Tools/ZhuHuDaily-Brdging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,12 +530,14 @@
 				DEVELOPMENT_TEAM = 9X3F3UD5EQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "ZhuHuDaily-swift/Info.plist";
+				INFOPLIST_FILE = "ZhuHuDaily-swift/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wrappers.ZhuHuDaily-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Wrappers/git/ZhuHuDaily-Swift/ZhuHuDaily-swift/Classes/Tools/ZhuHuDaily-Brdging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

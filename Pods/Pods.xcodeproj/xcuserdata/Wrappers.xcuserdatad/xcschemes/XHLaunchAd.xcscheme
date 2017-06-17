@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4C9EE4EA2605C8E951AD27719D58A2E1'
-               BlueprintName = 'SVProgressHUD'
+               BlueprintIdentifier = '3ECB6F7AABDC3B833003A6D4BC2367BC'
+               BlueprintName = 'XHLaunchAd'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SVProgressHUD.framework'>
+               BuildableName = 'XHLaunchAd.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

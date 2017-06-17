@@ -26,6 +26,8 @@ let LATEST_STORY_API = "http://news-at.zhihu.com/api/4/news/latest"
 let BEFORE_STORY_API = "http://news-at.zhihu.com/api/4/news/before/"
 //故事详情Api
 let STORY_DETAIL_API = "http://news-at.zhihu.com/api/4/news/"
+//启动页Api
+let LAUNCH_SCREEN_API = "http://news-at.zhihu.com/api/7/prefetch-launch-images/1080*1920"
 //headView高度
 let HEAD_VIEW_HEIGHT = APP_HEIGHT * 0.3
 //sectionhead高度

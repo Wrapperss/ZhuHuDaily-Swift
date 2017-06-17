@@ -11,6 +11,4 @@
 
 
 
-
-
 #endif /* ZhuHuDaily_Brdging_Header_h */
