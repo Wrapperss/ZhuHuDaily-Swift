@@ -57,6 +57,7 @@ extension MainViewController {
             
             //重新加载tableview视图
             self.tableView.reloadData()
+            SVProgressHUD.showSuccess(withStatus: "刷新成功")
         }) { (error) in
             if CacheTool.shared.containStoryCache(keyDate: dateMark) {
                 SVProgressHUD.showError(withStatus: "刷新失败!")

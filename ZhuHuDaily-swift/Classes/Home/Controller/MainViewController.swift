@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var tableView = UITableView()
     var headView = StoryRotateView()
-    var fakeNav = FakeNavView.init(title: "")
+    var fakeNav = FakeNavView.init(title: "知乎日报")
     
     var storyArray = [StoryModel]()
     var beforeStoryArray = [[StoryModel]]()
@@ -28,12 +28,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        
+        SVProgressHUD.show(withStatus: "加载中")
         self.loadStory()
         self.setTableView()
         self.setFakeNav()
         self.setRefresh()
-        
+        if storyArray.count <= 6 {
+            tableView.mj_footer.beginRefreshing()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,7 +55,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let detailVC = DetailViewController()
         if indexPath == nil {
             if topStoryArray.count != 0 {
-                detailVC.setMsgForDetail(topStoryArray[currentPage!].id)
+                if currentPage == 5 {
+                    detailVC.setMsgForDetail(topStoryArray[0].id)
+                }
+                else {
+                    detailVC.setMsgForDetail(topStoryArray[currentPage!].id)
+                }
             }
             else {
                 return
@@ -108,7 +115,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         let identifier = "storyCell"
         let cell: StoryViewCell = tableView.dequeueReusableCell(withIdentifier: identifier) as! StoryViewCell
-        let dateMark = Date.init(timeInterval: 24*60*60, since: Date())
+        let dateMark = Date.init(timeInterval: -24*60*60, since: Date())
         if indexPath.section == 0 {
             if storyArray.count == 0 {
                 if CacheTool.shared.containStoryCache(keyDate: dateMark) {

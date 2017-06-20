@@ -23,6 +23,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
     var coverView = UIImageView()
     var shareView = ShareView()
     var actionView = ActionView.init(frame: CGRect.init(x: 0, y: 0.92 * APP_HEIGHT, width: APP_WIDTH, height: 0.08 * APP_HEIGHT))
+    var fakeNavBar = FakeNavBar.init(frame: CGRect.init(x: 0, y: 20, width: APP_WIDTH, height: 44))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,29 +55,42 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
         self.webView.scrollView.addSubview(coverView)
         
         //ActionView
-        //actionView.frame = CGRect.init(x: 0, y: 0.92 * APP_HEIGHT, width: APP_WIDTH, height: 0.08 * APP_HEIGHT)
         actionView.delegate = self
         self.view.addSubview(actionView)
+        
+        //FakeNavbar
+        fakeNavBar.backBlock = { () -> Void in
+            self.navigationController?.popViewController(animated: true)
+        }
+        self.view.addSubview(fakeNavBar)
         
     }
     
     
     // MARK - ActionViewDelegate
     func commentButtonClick() -> Void {
+        //查看文章的评论
+        let commentViewController = CommentViewController()
+        commentViewController.id = self.detailStoryModel.id
+        
+        self.navigationController?.pushViewController(commentViewController, animated: true)
+    }
+    
+    func shareButtonClick() -> Void {
+        //分享
         let bgView = UIView.init(frame: self.view.bounds)
         
         bgView.tag = 1
         
         bgView.backgroundColor = UIColor.init(white: 0, alpha: 0.2)
-        //bgView.alpha = 0.2
         self.view.addSubview(bgView)
         
-        shareView.frame = CGRect.init(x: 0.2 * APP_WIDTH, y: -0.1 * APP_HEIGHT, width: 0.6 * APP_WIDTH, height: 0.4 * APP_HEIGHT)
+        shareView.frame = CGRect.init(x: 0.1 * APP_WIDTH, y: -0.1 * APP_HEIGHT, width: 0.8 * APP_WIDTH, height: 0.2 * APP_HEIGHT)
         shareView.tag = 2
         bgView.addSubview(shareView)
         
-        UIView.animate(withDuration: 1.0) {
-            self.shareView.center.y = 0.4 * APP_HEIGHT
+        UIView.animate(withDuration: 0.8) {
+            self.shareView.center.y = 0.5 * APP_HEIGHT
         }
         
         let tapGesturRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backToAirtity))
@@ -84,28 +98,32 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
     }
     
     func backToAirtity() -> Void {
-        UIView.animate(withDuration: 1.0) { 
-            self.shareView.center.y = 1.1 * APP_HEIGHT
-        }
         for view in self.view.subviews {
             if view.tag == 1 {
                 view.removeFromSuperview()
             }
         }
     }
-    func shareButtonClick() -> Void {
-        print("分享按钮")
-    }
+
+    
     // MARK - LoadStory
     private func loadStoryDetail(_ id: String) -> Void {
         SVProgressHUD.show(withStatus: "加载中~")
         if CacheTool.shared.getStoryDetail(id: id) != nil {
             self.detailStoryModel = CacheTool.shared.getStoryDetail(id: id)!
+            self.fakeNavBar.currentContent = self.detailStoryModel
         }
         else {
             NetworkTool.shared.loadDateInfo(urlString: STORY_DETAIL_API.appending(id), params: ["":""], success: { (responseObject) in
                 self.detailStoryModel = StoryDetailModel.mj_object(withKeyValues: responseObject)
                 CacheTool.shared.setStoryDetail(self.detailStoryModel)
+                self.fakeNavBar.currentContent = self.detailStoryModel
+                if CacheTool.shared.containFavoriteStory(self.detailStoryModel.id) {
+                    self.fakeNavBar.isFavorite = true
+                }
+                else {
+                    self.fakeNavBar.isFavorite = false
+                }
             }) { (error) in
                 SVProgressHUD.showError(withStatus: "加载失败!")
             }

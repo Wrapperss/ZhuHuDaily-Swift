@@ -17,6 +17,7 @@ class CacheTool {
     
     let storyCache = YYCache.init(name: "storyCache")
     let storyDetailCache = YYCache.init(name: "storyDetailCache")
+    let favorteStoryCache = YYCache.init(name: "favoriteStoryCache")
     
     // MARK - StoryCache
     
@@ -62,4 +63,40 @@ class CacheTool {
         storyDetailCache?.setObject(storyDetailModel, forKey: storyDetailModel.id)
     }
     
+    // MARK - FavorteStoryCache
+    // add
+    func addFavoriteStory(_ storyDetailModel: StoryDetailModel) -> Void {
+        var favoriteArray: [StoryDetailModel] = favorteStoryCache?.object(forKey: "favoriteArray") != nil ? favorteStoryCache?.object(forKey: "favoriteArray") as! [StoryDetailModel] : [StoryDetailModel]()
+        favoriteArray.append(storyDetailModel)
+        favorteStoryCache?.setObject(favoriteArray as NSCoding, forKey: "favoriteArray")
+    }
+    
+    // delete
+    func deleteFavorite(_ deleteStoryDetailIdId: String) -> Void {
+        var favoriteArray: [StoryDetailModel] = favorteStoryCache?.object(forKey: "favoriteArray") != nil ? favorteStoryCache?.object(forKey: "favoriteArray") as! [StoryDetailModel] : [StoryDetailModel]()
+        var index = 0
+        for item in favoriteArray {
+            if item.id == deleteStoryDetailIdId {
+                favoriteArray.remove(at: index)
+                index = index + 1
+            }
+        }
+        favorteStoryCache?.setObject(favoriteArray as NSCoding, forKey: "favoriteArray")
+    }
+    
+    // contain
+    func containFavoriteStory(_ containStoryId: String) -> Bool {
+        let favoriteArray: [StoryDetailModel] = favorteStoryCache?.object(forKey: "favoriteArray") != nil ? favorteStoryCache?.object(forKey: "favoriteArray") as! [StoryDetailModel] : [StoryDetailModel]()
+        for item in favoriteArray {
+            if item.id == containStoryId {
+                return true
+            }
+        }
+        return false
+    }
+    
+    // getAllFavoriteStory
+    func getAllFavoriteStory() -> [StoryDetailModel] {
+        return favorteStoryCache?.object(forKey: "favoriteArray") != nil ? favorteStoryCache?.object(forKey: "favoriteArray") as! [StoryDetailModel] : [StoryDetailModel]()
+    }
 }

@@ -8,5 +8,5 @@ target 'ZhuHuDaily-swift' do
     pod 'SVProgressHUD'
     pod 'YYCache'	
     pod 'SDWebImage', '~>3.8'
-    pod 'XHLaunchAd'
+    pod 'ViewDeck'
 end

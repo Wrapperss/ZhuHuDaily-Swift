@@ -10,6 +10,13 @@
 		3C3FAF66950B64102B61D551 /* Pods_ZhuHuDaily_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0848B6FAA15C25A5C7DA6881 /* Pods_ZhuHuDaily_swift.framework */; };
 		9F0A48411EA09C05003ADE72 /* UI-MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */; };
 		9F2A30D91E9613F3006A8880 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A30D81E9613F3006A8880 /* NetworkTool.swift */; };
+		9F3175871EF6620E005F4555 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3175861EF6620E005F4555 /* CommentViewController.swift */; };
+		9F31758B1EF6976B005F4555 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31758A1EF6976B005F4555 /* CommentModel.swift */; };
+		9F3175911EF6A07F005F4555 /* LongCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31758F1EF6A07F005F4555 /* LongCommentCell.swift */; };
+		9F3175921EF6A07F005F4555 /* LongCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3175901EF6A07F005F4555 /* LongCommentCell.xib */; };
+		9F3175951EF7725F005F4555 /* ShortCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3175931EF7725F005F4555 /* ShortCommentCell.swift */; };
+		9F3175961EF7725F005F4555 /* ShortCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3175941EF7725F005F4555 /* ShortCommentCell.xib */; };
+		9F3175981EF7CC7F005F4555 /* FakeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3175971EF7CC7F005F4555 /* FakeNavBar.swift */; };
 		9F46BF491EA7088C00D0B036 /* FakeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46BF481EA7088C00D0B036 /* FakeNavView.swift */; };
 		9F46BF4B1EA7116800D0B036 /* ScrollView+MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */; };
 		9F4DC0B41E9B375A00200192 /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DC0B31E9B375A00200192 /* StoryModel.swift */; };
@@ -42,6 +49,13 @@
 		8716639D102AC26C687FAE90 /* Pods-ZhuHuDaily-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhuHuDaily-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhuHuDaily-swift/Pods-ZhuHuDaily-swift.release.xcconfig"; sourceTree = "<group>"; };
 		9F0A48401EA09C05003ADE72 /* UI-MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI-MainViewController.swift"; sourceTree = "<group>"; };
 		9F2A30D81E9613F3006A8880 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		9F3175861EF6620E005F4555 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		9F31758A1EF6976B005F4555 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		9F31758F1EF6A07F005F4555 /* LongCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LongCommentCell.swift; sourceTree = "<group>"; };
+		9F3175901EF6A07F005F4555 /* LongCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LongCommentCell.xib; sourceTree = "<group>"; };
+		9F3175931EF7725F005F4555 /* ShortCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortCommentCell.swift; sourceTree = "<group>"; };
+		9F3175941EF7725F005F4555 /* ShortCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortCommentCell.xib; sourceTree = "<group>"; };
+		9F3175971EF7CC7F005F4555 /* FakeNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNavBar.swift; sourceTree = "<group>"; };
 		9F46BF481EA7088C00D0B036 /* FakeNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNavView.swift; sourceTree = "<group>"; };
 		9F46BF4A1EA7116800D0B036 /* ScrollView+MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+MainViewController.swift"; sourceTree = "<group>"; };
 		9F4DC0B31E9B375A00200192 /* StoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
@@ -107,6 +121,43 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
+		9F3175851EF661F0005F4555 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				9F31758E1EF6A011005F4555 /* View */,
+				9F3175891EF69758005F4555 /* Model */,
+				9F3175881EF6974D005F4555 /* Controller */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		9F3175881EF6974D005F4555 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F3175861EF6620E005F4555 /* CommentViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9F3175891EF69758005F4555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F31758A1EF6976B005F4555 /* CommentModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F31758E1EF6A011005F4555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F31758F1EF6A07F005F4555 /* LongCommentCell.swift */,
+				9F3175901EF6A07F005F4555 /* LongCommentCell.xib */,
+				9F3175931EF7725F005F4555 /* ShortCommentCell.swift */,
+				9F3175941EF7725F005F4555 /* ShortCommentCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9F5ABFE01E95E3FF0063C8F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +172,7 @@
 			children = (
 				9F9542841EF533E100D4F5F7 /* ActionView.swift */,
 				9F8E17C61EF55B8C00BCADD4 /* ShareView.swift */,
+				9F3175971EF7CC7F005F4555 /* FakeNavBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -231,11 +283,12 @@
 		9FE645C31E95CDBC005672D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */,
+				9F3175851EF661F0005F4555 /* Comment */,
 				9FB841CA1EF5142B00B49CA7 /* Home */,
 				9FB841CC1EF5145700B49CA7 /* Content */,
 				9FB841CB1EF5144700B49CA7 /* Lanuch */,
 				9FE645C81E95CE0E005672D2 /* Tools */,
-				9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -325,9 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9EDE201EEBCACD0043C6E7 /* Launch.storyboard in Resources */,
+				9F3175921EF6A07F005F4555 /* LongCommentCell.xib in Resources */,
 				9FB12C141E95CC2B004812BB /* Assets.xcassets in Resources */,
 				9FD9C71A1E976C150040821A /* StoryViewCell.xib in Resources */,
 				9FB12C121E95CC2B004812BB /* Main.storyboard in Resources */,
+				9F3175961EF7725F005F4555 /* ShortCommentCell.xib in Resources */,
 				9FBE5FDA1EEBE7AA00523257 /* LoadingScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,13 +445,17 @@
 				9F9542851EF533E100D4F5F7 /* ActionView.swift in Sources */,
 				9F5004871E9CF99800F73873 /* StoryRotateView.swift in Sources */,
 				9FE3F20D1E9F057700CC68FE /* DateTool.swift in Sources */,
+				9F3175911EF6A07F005F4555 /* LongCommentCell.swift in Sources */,
 				9F8E17C71EF55B8C00BCADD4 /* ShareView.swift in Sources */,
 				9F2A30D91E9613F3006A8880 /* NetworkTool.swift in Sources */,
 				9F0A48411EA09C05003ADE72 /* UI-MainViewController.swift in Sources */,
 				9F5ABFE41E95E4640063C8F8 /* PrefixHeader.swift in Sources */,
+				9F3175981EF7CC7F005F4555 /* FakeNavBar.swift in Sources */,
 				9F46BF4B1EA7116800D0B036 /* ScrollView+MainViewController.swift in Sources */,
 				9FB12C0D1E95CC2B004812BB /* AppDelegate.swift in Sources */,
 				9FBE5FDC1EEBE87200523257 /* LoadingViewController.swift in Sources */,
+				9F31758B1EF6976B005F4555 /* CommentModel.swift in Sources */,
+				9F3175871EF6620E005F4555 /* CommentViewController.swift in Sources */,
 				9F5004851E9CF89100F73873 /* TopStoryModel.swift in Sources */,
 				9FED72591EA1EA2E004968CD /* DetailViewController.swift in Sources */,
 				9FD9C7191E976C150040821A /* StoryViewCell.swift in Sources */,
@@ -407,6 +466,7 @@
 				9FE3F20B1E9F021600CC68FE /* CacheTool.swift in Sources */,
 				9F46BF491EA7088C00D0B036 /* FakeNavView.swift in Sources */,
 				9F4DC0B41E9B375A00200192 /* StoryModel.swift in Sources */,
+				9F3175951EF7725F005F4555 /* ShortCommentCell.swift in Sources */,
 				9FE3F20F1E9F0BC500CC68FE /* Extension-Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
