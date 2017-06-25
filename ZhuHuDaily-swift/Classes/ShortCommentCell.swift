@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTheme
 
 class ShortCommentCell: UITableViewCell {
 
@@ -20,6 +21,13 @@ class ShortCommentCell: UITableViewCell {
         //切成圆形
         self.avatarImageView.layer.masksToBounds = true
         self.avatarImageView.layer.cornerRadius = 20
+        
+        self.theme_backgroundColor = globalBackgroundColorPicker
+        self.likesLabel.theme_textColor = globalTextColorPicker
+        self.contentLabel.theme_textColor = globalTextColorPicker
+        self.contentLabel.theme_backgroundColor = globalBackgroundColorPicker
+        self.authorlabel.theme_textColor = globalTextColorPicker
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

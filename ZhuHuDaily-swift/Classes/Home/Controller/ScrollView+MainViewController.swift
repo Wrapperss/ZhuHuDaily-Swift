@@ -27,6 +27,11 @@ extension MainViewController {
 
 extension UIColor {
     class func colorWithZhuHu(alpha: CGFloat) -> UIColor {
-        return UIColor.init(red: 0/255.0, green: 175/255.0, blue: 240/255.0, alpha: alpha)
+        if defaults.object(forKey: "isNight") as! Bool {
+            return UIColor.init(red: 29/255, green: 30/255, blue: 40/255, alpha: alpha)
+        }
+        else {
+            return UIColor.init(red: 0/255.0, green: 175/255.0, blue: 240/255.0, alpha: alpha)
+        }
     }
 }

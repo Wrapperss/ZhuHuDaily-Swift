@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="pickViewController" customModule="ZhuHuDaily_swift" customModuleProvider="target">
+            <connections>
+                <outlet property="pickView" destination="JIr-CJ-8IV" id="tI3-Pu-TSV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="677-pb-HVJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                    <connections>
+                        <action selector="blockButtonClick:" destination="-1" eventType="touchUpInside" id="cbz-05-RoU"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tk6-LZ-3Lg">
+                    <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-CJ-8IV">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                            <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <date key="date" timeIntervalSinceReferenceDate="519955200.29560101">
+                                <!--2017-06-24 00:00:00 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="692-Yj-jYh"/>
+                        <constraint firstItem="JIr-CJ-8IV" firstAttribute="top" secondItem="Tk6-LZ-3Lg" secondAttribute="top" id="Rfg-vS-Xfh"/>
+                        <constraint firstAttribute="bottom" secondItem="JIr-CJ-8IV" secondAttribute="bottom" id="YrA-tJ-Rb9"/>
+                        <constraint firstAttribute="trailing" secondItem="JIr-CJ-8IV" secondAttribute="trailing" id="j40-XH-drJ"/>
+                        <constraint firstItem="JIr-CJ-8IV" firstAttribute="leading" secondItem="Tk6-LZ-3Lg" secondAttribute="leading" id="w4M-FR-rP7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="677-pb-HVJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Qp-aX-mDy"/>
+                <constraint firstAttribute="trailing" secondItem="677-pb-HVJ" secondAttribute="trailing" id="SPl-42-wNi"/>
+                <constraint firstItem="677-pb-HVJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hHd-2K-dHu"/>
+                <constraint firstAttribute="trailing" secondItem="Tk6-LZ-3Lg" secondAttribute="trailing" id="iuj-5l-QhZ"/>
+                <constraint firstItem="Tk6-LZ-3Lg" firstAttribute="top" secondItem="677-pb-HVJ" secondAttribute="bottom" id="klU-ES-p0g"/>
+                <constraint firstItem="677-pb-HVJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="l4m-Ac-yaC"/>
+                <constraint firstItem="677-pb-HVJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p1r-23-Gka"/>
+                <constraint firstItem="Tk6-LZ-3Lg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qJE-pu-aLf"/>
+                <constraint firstAttribute="bottom" secondItem="Tk6-LZ-3Lg" secondAttribute="bottom" id="y1I-oc-YGF"/>
+                <constraint firstAttribute="trailing" secondItem="677-pb-HVJ" secondAttribute="trailing" id="yrm-A2-Zdc"/>
+            </constraints>
+            <point key="canvasLocation" x="-264" y="12"/>
+        </view>
+    </objects>
+</document>

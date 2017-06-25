@@ -49,6 +49,7 @@ class FakeNavBar: UIView {
         
         //收藏按钮
         favoriteButton.frame = CGRect.init(x: APP_WIDTH - 50, y: 5, width: 30, height: 30)
+        favoriteButton.backgroundColor = UIColor.init(white: 0, alpha: 0.6)
         favoriteButton.setImage(UIImage.init(named: "favorite"), for: .normal)
         favoriteButton.layer.masksToBounds = true
         favoriteButton.layer.cornerRadius = 15

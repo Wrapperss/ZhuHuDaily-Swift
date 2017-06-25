@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var tableView = UITableView()
     var headView = StoryRotateView()
-    var fakeNav = FakeNavView.init(title: "知乎日报")
+    var fakeNav = FakeNavView.init(title: "知乎日报", isShowSlidButton: true)
     
     var storyArray = [StoryModel]()
     var beforeStoryArray = [[StoryModel]]()
@@ -24,11 +24,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var titleArray = [String]()
     
     var date = Date()
+    var offSet: CGPoint?
+    
+    //  判断当前的内容是否需要刷新
+    var isNeedRefresh = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        SVProgressHUD.show(withStatus: "加载中")
         self.loadStory()
         self.setTableView()
         self.setFakeNav()
@@ -37,13 +40,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.mj_footer.beginRefreshing()
         }
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if self.offSet != nil {
+            self.tableView.setContentOffset(offSet!, animated: true)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        let userDefaults = UserDefaults.standard
+        let offsetDictionary: Dictionary = ["x" : self.tableView.contentOffset.x, "y" : self.tableView.contentOffset.y]
+        userDefaults.setValue(offsetDictionary, forKey: "homeOffset")
+    }
     
     //  topView 点击事件
     func clickOneView(currentPage: Int) -> Void {

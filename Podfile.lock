@@ -7,6 +7,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.1.2)
+  - SwiftTheme (0.3.3)
   - ViewDeck (3.1.0)
   - YYCache (1.0.4)
 
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage (~> 3.8)
   - SVProgressHUD
+  - SwiftTheme
   - ViewDeck
   - YYCache
 
@@ -27,9 +29,10 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftTheme: 85f84747a48749b5b3df7c3e96fc0b1d45677d30
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 99181ebf895441ad863f3705aa223d19f6a7e055
+PODFILE CHECKSUM: 44df49013345b0149d6b58a6aaaf308d93c287b1
 
 COCOAPODS: 1.2.1

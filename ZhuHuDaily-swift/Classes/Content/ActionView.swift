@@ -8,6 +8,7 @@
 
 import UIKit
 import Masonry
+import SwiftTheme
 
 protocol ActionViewDelegate {
     func commentButtonClick() -> Void
@@ -29,8 +30,9 @@ class ActionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.white
-
+        //self.backgroundColor = UIColor.white
+        self.theme_backgroundColor = globalBackgroundColorPicker
+        
         let width = self.bounds.size.width
         let height = self.bounds.size.height
         
@@ -54,7 +56,7 @@ class ActionView: UIView {
             make?.centerY.equalTo()(self)
             make?.left.equalTo()(self)?.offset()(0.15 * width)
         }
-        
+        commentButton.theme_setTitleColor(globalTextColorPicker, forState: .normal)
         
         let shareButton = UIButton.init()
         shareButton.setTitle("分享", for: .normal)
@@ -66,6 +68,7 @@ class ActionView: UIView {
             make?.centerY.equalTo()(self)
             make?.right.equalTo()(self)?.offset()(-0.2 * width)
         }
+        shareButton.theme_setTitleColor(globalTextColorPicker, forState: .normal)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SwiftTheme
 
 class LongCommentCell: UITableViewCell {
     
@@ -68,6 +69,11 @@ class LongCommentCell: UITableViewCell {
         let dictionary = [NSKernAttributeName : 5]
         contentLabel.attributedText = NSAttributedString.init(string: contentLabel.text!, attributes: dictionary)
         
+        self.theme_backgroundColor = globalBackgroundColorPicker
+        self.authorLabel.theme_textColor = globalTextColorPicker
+        self.contentLabel.theme_textColor = globalTextColorPicker
+        self.contentLabel.theme_backgroundColor = globalBackgroundColorPicker
+        self.likesLabel.theme_textColor = globalTextColorPicker
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

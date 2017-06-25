@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import SwiftTheme
 
 class StoryViewCell: UITableViewCell {
 
@@ -18,7 +19,8 @@ class StoryViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        self.theme_backgroundColor = ["#FEFEFE", "#1D1E28"]
+        self.titleLabel.theme_textColor = globalTextColorPicker
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,8 +30,20 @@ class StoryViewCell: UITableViewCell {
     }
     
     func setMessage(_ storyModel: StoryModel) -> Void {
-        self.titleLabel.text = storyModel.title;
-        self.pictureView.sd_setImage(with: URL.init(string: storyModel.images[0]), placeholderImage: UIImage.init(named: "default_image"))
+        self.titleLabel.text = storyModel.title
+        if storyModel.images.count == 0 {
+            self.pictureView.image = UIImage.init(named: "default_image")
+        }
+        else {
+            self.pictureView.sd_setImage(with: URL.init(string: storyModel.images[0]), placeholderImage: UIImage.init(named: "default_image"))
+        }
         self.mutilPicture.isHidden = !storyModel.multipic
     }
+    
+    func setFavoriteMessage(_ storyDetailModel: StoryDetailModel) -> Void {
+        self.titleLabel.text = storyDetailModel.title
+        self.pictureView.sd_setImage(with: URL.init(string: storyDetailModel.images[0]), placeholderImage: UIImage.init(named: "default_image"))
+        self.mutilPicture.isHidden = true
+    }
+    
 }

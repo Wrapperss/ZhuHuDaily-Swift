@@ -9,4 +9,5 @@ target 'ZhuHuDaily-swift' do
     pod 'YYCache'	
     pod 'SDWebImage', '~>3.8'
     pod 'ViewDeck'
+    pod 'SwiftTheme'
 end

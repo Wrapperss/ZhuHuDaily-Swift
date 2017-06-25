@@ -28,11 +28,9 @@ class LoadingViewController: UIViewController {
         
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-//            UIApplication.shared.delegate?.window??.rootViewController = UINavigationController.init(rootViewController: MainViewController())
             let mainView = UINavigationController.init(rootViewController: MainViewController())
-            let slideView = UIViewController()
-            slideView.view.backgroundColor = UIColor.red
-            slideView.preferredContentSize = CGSize.init(width: 0.4 * APP_WIDTH, height: APP_HEIGHT)
+            let slideView = SlideViewController()
+            slideView.preferredContentSize = CGSize.init(width: 0.6 * APP_WIDTH, height: APP_HEIGHT)
             let viewDeckComtroller = IIViewDeckController.init(center: mainView, leftViewController: slideView)
             UIApplication.shared.delegate?.window??.rootViewController = viewDeckComtroller
             UIApplication.shared.delegate?.window??.makeKeyAndVisible()

@@ -18,6 +18,7 @@ class CacheTool {
     let storyCache = YYCache.init(name: "storyCache")
     let storyDetailCache = YYCache.init(name: "storyDetailCache")
     let favorteStoryCache = YYCache.init(name: "favoriteStoryCache")
+    let themArrayCache = YYCache.init(name: "themArrayCache")
     
     // MARK - StoryCache
     
@@ -78,8 +79,9 @@ class CacheTool {
         for item in favoriteArray {
             if item.id == deleteStoryDetailIdId {
                 favoriteArray.remove(at: index)
-                index = index + 1
+                break
             }
+            index = index + 1
         }
         favorteStoryCache?.setObject(favoriteArray as NSCoding, forKey: "favoriteArray")
     }
@@ -98,5 +100,16 @@ class CacheTool {
     // getAllFavoriteStory
     func getAllFavoriteStory() -> [StoryDetailModel] {
         return favorteStoryCache?.object(forKey: "favoriteArray") != nil ? favorteStoryCache?.object(forKey: "favoriteArray") as! [StoryDetailModel] : [StoryDetailModel]()
+    }
+    
+    
+    // ThemArray 
+    // set
+    func setThemArray(_ themArray: [ThemModel]) -> Void {
+        themArrayCache?.setObject(themArray as NSCoding, forKey: "themArray")
+    }
+    // get
+    func getThemArray() -> [ThemModel]? {
+        return themArrayCache?.object(forKey: "themArray") as? [ThemModel]
     }
 }

@@ -8,11 +8,14 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftTheme
 
 class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDelegate{
     
     var detailStoryModel: StoryDetailModel = StoryDetailModel() {
         didSet {
+            self.webView.theme_backgroundColor = globalBackgroundColorPicker
+            
             self.webView.loadHTMLString(detailStoryModel.body.appending("<link rel=\"stylesheet\" type=\"text/css\" href=\"\(detailStoryModel.css[0]))\">"), baseURL: nil)
             self.coverView.sd_setImage(with: URL.init(string: detailStoryModel.image), placeholderImage: UIImage.init(named: "default_image"))
             SVProgressHUD.dismiss()
@@ -43,7 +46,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
     // MARK - UI
     func setUl() -> Void {
         //webView
-        webView.frame = CGRect.init(x: 0, y: -20, width: APP_WIDTH, height: APP_HEIGHT + 20)
+        webView.frame = CGRect.init(x: 0, y: -20, width: APP_WIDTH, height: APP_HEIGHT * 0.92 + 20)
         self.view.addSubview(webView)
         
         webView.scrollView.delegate = self
@@ -61,6 +64,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
         //FakeNavbar
         fakeNavBar.backBlock = { () -> Void in
             self.navigationController?.popViewController(animated: true)
+        }
+        if CacheTool.shared.containFavoriteStory(detailStoryModel.id) {
+            fakeNavBar.isFavorite = true
         }
         self.view.addSubview(fakeNavBar)
         
