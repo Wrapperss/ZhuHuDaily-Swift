@@ -9,6 +9,6 @@
 #ifndef ZhuHuDaily_Brdging_Header_h
 #define ZhuHuDaily_Brdging_Header_h
 
-
+#import <UMSocialCore/UMSocialCore.h>
 
 #endif /* ZhuHuDaily_Brdging_Header_h */

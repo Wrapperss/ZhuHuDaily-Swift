@@ -44,7 +44,8 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
             make?.centerX.equalTo()(self.view)
             make?.centerY.equalTo()(self.view)
         })
-        favoriteTableView.theme_backgroundColor = globalBackgroundColorPicker
+        favoriteTableView.theme_backgroundColor = ["#FEFEFE", "#1D1E28"]
+        //判断是否已经添加了收藏，如果没有收藏则不显示tableView
         if favoriteStoryArray.count != 0 {
             //tableview
             favoriteTableView.frame = CGRect.init(x: 0, y: 64, width: APP_WIDTH, height: APP_HEIGHT)

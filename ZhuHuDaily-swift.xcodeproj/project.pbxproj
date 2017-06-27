@@ -212,6 +212,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F5BBD3F1F01D7DB0002E439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F24C1DA1EFE3C1A0059EBA2 /* pickViewController.swift */,
+				9F24C1DB1EFE3C1A0059EBA2 /* pickViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9F9542831EF533C800D4F5F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,18 +234,10 @@
 		9FAE4AB01EFF987E00FA7FF9 /* ThemTool */ = {
 			isa = PBXGroup;
 			children = (
-				9FAE4AB31EFF997300FA7FF9 /* Plist */,
 				9FAE4AB11EFF989A00FA7FF9 /* MyThemes.swift */,
 				9FAE4AB61EFF9BA100FA7FF9 /* Global.swift */,
 			);
 			name = ThemTool;
-			sourceTree = "<group>";
-		};
-		9FAE4AB31EFF997300FA7FF9 /* Plist */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Plist;
 			sourceTree = "<group>";
 		};
 		9FB12C001E95CC2B004812BB = {
@@ -345,8 +346,8 @@
 		9FE645C31E95CDBC005672D2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9FE645C81E95CE0E005672D2 /* Tools */,
 				9FB12C0C1E95CC2B004812BB /* AppDelegate.swift */,
+				9FE645C81E95CE0E005672D2 /* Tools */,
 				9FFF693B1EF8FE9B005B1321 /* Them */,
 				9FFF69371EF8FE78005B1321 /* Setting */,
 				9FFF69341EF8FE30005B1321 /* Favorite */,
@@ -409,6 +410,7 @@
 		9FFF69371EF8FE78005B1321 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				9F5BBD3F1F01D7DB0002E439 /* View */,
 				9FFF69381EF8FE80005B1321 /* Controller */,
 			);
 			name = Setting;
@@ -418,8 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				9FFF69391EF8FE93005B1321 /* SettingViewController.swift */,
-				9F24C1DA1EFE3C1A0059EBA2 /* pickViewController.swift */,
-				9F24C1DB1EFE3C1A0059EBA2 /* pickViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

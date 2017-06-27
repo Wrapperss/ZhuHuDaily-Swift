@@ -23,6 +23,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //设置主题颜色
         self.view.theme_backgroundColor = ["#E6E7ED", "#1D1E28"]
         self.title = "设置"
         
@@ -218,7 +219,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
         default:
             let cell = UITableViewCell.init(style: .default, reuseIdentifier: "menuCell")
-            cell.textLabel?.text = "缓存"
+            cell.textLabel?.text = "关于我们"
             cell.textLabel?.theme_textColor = globalTextColorPicker
             cell.theme_backgroundColor = ["#FEFEFE", "#1D1E28"]
             return cell

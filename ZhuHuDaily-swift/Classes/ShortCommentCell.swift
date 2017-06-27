@@ -22,10 +22,10 @@ class ShortCommentCell: UITableViewCell {
         self.avatarImageView.layer.masksToBounds = true
         self.avatarImageView.layer.cornerRadius = 20
         
-        self.theme_backgroundColor = globalBackgroundColorPicker
+        self.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         self.likesLabel.theme_textColor = globalTextColorPicker
         self.contentLabel.theme_textColor = globalTextColorPicker
-        self.contentLabel.theme_backgroundColor = globalBackgroundColorPicker
+        self.contentLabel.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         self.authorlabel.theme_textColor = globalTextColorPicker
         
     }

@@ -69,10 +69,10 @@ class LongCommentCell: UITableViewCell {
         let dictionary = [NSKernAttributeName : 5]
         contentLabel.attributedText = NSAttributedString.init(string: contentLabel.text!, attributes: dictionary)
         
-        self.theme_backgroundColor = globalBackgroundColorPicker
+        self.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         self.authorLabel.theme_textColor = globalTextColorPicker
         self.contentLabel.theme_textColor = globalTextColorPicker
-        self.contentLabel.theme_backgroundColor = globalBackgroundColorPicker
+        self.contentLabel.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         self.likesLabel.theme_textColor = globalTextColorPicker
     }
 

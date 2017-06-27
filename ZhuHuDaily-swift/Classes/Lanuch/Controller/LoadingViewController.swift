@@ -25,8 +25,7 @@ class LoadingViewController: UIViewController {
 //        }) { (error) in
 //            print(error)
 //        }
-        
-        
+        //更换rootViewController
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
             let mainView = UINavigationController.init(rootViewController: MainViewController())
             let slideView = SlideViewController()

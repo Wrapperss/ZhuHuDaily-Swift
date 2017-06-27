@@ -19,6 +19,10 @@ class ShareView: UIView {
         // Drawing code
     }
     */
+    
+    typealias SHARE_TO_SINA = () -> Void
+        
+    var shareToSina: SHARE_TO_SINA?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +36,7 @@ class ShareView: UIView {
         let sinaButton = UIButton()
         let weiChatButton = UIButton()
         let QQZoneButton = UIButton()
+
         
         //新浪微博的分享按钮
         sinaButton.titleLabel?.font = UIFont.systemFont(ofSize: 25)
@@ -41,6 +46,7 @@ class ShareView: UIView {
             make?.centerY.equalTo()(self)
             make?.left.equalTo()(self.mas_left)?.offset()(35)
         }
+        sinaButton.addTarget(self, action: #selector(shareToSinaButtonClick), for: .touchUpInside)
         sinaButton.theme_setTitleColor(globalTextColorPicker, forState: .normal)
         
         //朋友圈的分享按钮
@@ -69,4 +75,9 @@ class ShareView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func shareToSinaButtonClick() -> Void {
+        if shareToSina != nil {
+            shareToSina!()
+        }
+    }
 }

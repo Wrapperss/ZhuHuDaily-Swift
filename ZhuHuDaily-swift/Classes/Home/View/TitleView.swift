@@ -15,16 +15,14 @@ class TitleView: UIView {
     
     func setMessage(title: String) -> Void {
         self.frame = CGRect.init(x: 0, y: 0, width: APP_WIDTH, height: 44)
-        //self.backgroundColor = ZHI_HU_COLOR
         self.theme_backgroundColor = ["#149EEC", "#1D1E28"]
-        self.titleLabel.theme_textColor = globalTextColorPicker
+        self.titleLabel.theme_textColor = ["#FFFFFF" ,"#ECF0F1"]
         self.addTitleLabel(title)
     }
     
     private func addTitleLabel(_ title: String) -> Void {
         titleLabel.text = title
         titleLabel.font = UIFont.systemFont(ofSize: 18)
-//        titleLabel.textColor = UIColor.white
         self.addSubview(titleLabel)
         titleLabel.mas_makeConstraints { (make) in
             make?.centerX.equalTo()(self.mas_centerX)

@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var tableView = UITableView()
     var headView = StoryRotateView()
-    var fakeNav = FakeNavView.init(title: "知乎日报", isShowSlidButton: true)
+    var fakeNav = FakeNavView.init(title: "今日新闻", isShowSlidButton: true)
     
     var storyArray = [StoryModel]()
     var beforeStoryArray = [[StoryModel]]()
@@ -31,11 +31,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //隐藏原生的NavigationBar
         self.navigationController?.navigationBar.isHidden = true
+        //通过网络请求获取数据
         self.loadStory()
+        //设置Tableview
         self.setTableView()
+        //设置自定义的NavigationBar
         self.setFakeNav()
+        //通过MJRefresh设置刷新
         self.setRefresh()
+        //当今天新闻内容小于6时，自动加载下一天的
         if storyArray.count <= 6 {
             tableView.mj_footer.beginRefreshing()
         }

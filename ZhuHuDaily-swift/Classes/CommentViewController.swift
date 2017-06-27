@@ -32,10 +32,12 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //设置UI
         self.setUpUI()
         
+        //从网络上去获取数据
         self.loadComment()
-        
+        // 设置刷新样式
         self.setRefresh()
     }
 
@@ -47,7 +49,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK - UI
     private func setUpUI() -> Void {
-        self.view.theme_backgroundColor = globalBackgroundColorPicker
+        self.view.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         
         // Fake NavigationBar
         let fakeNav = FakeNavView.init(title: "查看评论", isShowSlidButton: false)
@@ -72,7 +74,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Main TableView
         tableView.frame = CGRect.init(x: 0, y: 64, width: APP_WIDTH, height: APP_HEIGHT - 64)
-        tableView.theme_backgroundColor = globalBackgroundColorPicker
+        tableView.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib.init(nibName: "LongCommentCell", bundle: nil), forCellReuseIdentifier: "LongCommentCell")
@@ -144,7 +146,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let cell = UITableViewCell.init(style: .default, reuseIdentifier: "defaultCell")
                 cell.textLabel?.text = "暂无长评论"
                 cell.textLabel?.theme_textColor = globalTextColorPicker
-                cell.theme_backgroundColor = globalBackgroundColorPicker
+                cell.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
                 //cell.tintColor = UIColor.lightGray
                 cell.textLabel?.textColor = UIColor.lightGray
                 cell.selectionStyle = UITableViewCellSelectionStyle.none
@@ -177,7 +179,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
             if shortCommentArray.count == 0 {
                 let cell = UITableViewCell.init(style: .default, reuseIdentifier: "defaultCell")
                 cell.textLabel?.text = "暂无短评论"
-                cell.theme_backgroundColor = globalBackgroundColorPicker
+                cell.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
                 cell.textLabel?.theme_textColor = globalTextColorPicker
                 cell.selectionStyle = UITableViewCellSelectionStyle.none
                 return cell

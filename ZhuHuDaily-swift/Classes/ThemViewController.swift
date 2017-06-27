@@ -25,9 +25,11 @@ class ThemViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.isHidden = true
         
         // LOAD THEM TITLE
+        // 加载数据
         self.loadThemTitle()
         
         // TableView
+        // 设置TableView
         themTableView.delegate = self
         themTableView.dataSource = self
         themTableView.register(UINib.init(nibName: "ThemCell", bundle: nil), forCellReuseIdentifier: "themCell")
@@ -41,6 +43,7 @@ class ThemViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.addSubview(themTableView)
         
         // TitleView
+        // 通过block传递方法
         titleView.slideAction = { () -> Void in
             self.viewDeckController?.open(.left, animated: true)
         }

@@ -8,6 +8,13 @@ PODS:
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.1.2)
   - SwiftTheme (0.3.3)
+  - UMengUShare/Core (6.4.4):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.4)
+  - UMengUShare/Social/ReducedSina (6.4.4):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.4.4):
+    - UMengUShare/Core
   - ViewDeck (3.1.0)
   - YYCache (1.0.4)
 
@@ -19,6 +26,8 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8)
   - SVProgressHUD
   - SwiftTheme
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/UI
   - ViewDeck
   - YYCache
 
@@ -30,9 +39,10 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftTheme: 85f84747a48749b5b3df7c3e96fc0b1d45677d30
+  UMengUShare: cd54ae52958426b79aa9193a7b02058d6a6d9aa0
   ViewDeck: 942d90dd23c9f97cc8038be352255378167edcca
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 44df49013345b0149d6b58a6aaaf308d93c287b1
+PODFILE CHECKSUM: 24041e780282d7e37f7bb0ef753dfd81c40fa461
 
 COCOAPODS: 1.2.1

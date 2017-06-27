@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //打开调试日志
+        UMSocialManager.default().openLog(true)
+        UMSocialManager.default().umSocialAppkey = "5950b8be766613286700173c"
+        self.configUSharePlatforms()
+        
         if defaults.object(forKey: "firstLaunch") == nil {
             defaults.set(false, forKey: "firstLaunch")
             defaults.set(false, forKey: "isNight")
@@ -64,6 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
 
+    func configUSharePlatforms() -> Void {
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.sina, appKey: "1566150867", appSecret: "b853897fc9f6f07ccfdff71e5bf3a43b", redirectURL: "http://wrappers.com")
+    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //收到推送的请求
@@ -122,6 +130,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         completionHandler(alert)
     }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url, sourceApplication: sourceApplication, annotation: annotation)
+        return result
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

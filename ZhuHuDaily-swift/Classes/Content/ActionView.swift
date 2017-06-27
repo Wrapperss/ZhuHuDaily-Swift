@@ -31,7 +31,7 @@ class ActionView: UIView {
         super.init(frame: frame)
         
         //self.backgroundColor = UIColor.white
-        self.theme_backgroundColor = globalBackgroundColorPicker
+        self.theme_backgroundColor = ["#FEFEFE" ,"#1D1E28"]
         
         let width = self.bounds.size.width
         let height = self.bounds.size.height

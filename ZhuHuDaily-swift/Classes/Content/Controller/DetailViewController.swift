@@ -101,6 +101,26 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, ActionViewDe
         
         let tapGesturRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backToAirtity))
         bgView.addGestureRecognizer(tapGesturRecognizer)
+        
+        shareView.shareToSina = { () -> Void in
+                    let messageObject = UMSocialMessageObject.init()
+                    //let shareObject = UMShareWebpageObject.shareObject(withTitle: "测试分享标题", descr: "测试分享内容", thumImage: "https://mobile.umeng.com/images/pic/home/social/img-1.png")
+                    //messageObject.shareObject = shareObject
+                    messageObject.text = self.detailStoryModel.title
+//            let shareImageObject = UMShareImageObject.init()
+//            shareImageObject.shareImage = "http://pic2.zhimg.com/1ecea0f9a240a4b9ba73df26295a46e9.jpg"
+//            messageObject.shareObject = shareImageObject
+            
+                    UMSocialManager.default().share(to: UMSocialPlatformType.sina, messageObject: messageObject, currentViewController: self) { (data, error) in
+                        if error != nil {
+                            //UMSocialLogInfo("************Share fail with error \(error)*********")
+                            //print("************Share fail with error \(error)*********")
+                        }
+                        else {
+                            SVProgressHUD.showSuccess(withStatus: "分享成功")
+                        }
+                    }
+        }
     }
     
     func backToAirtity() -> Void {
